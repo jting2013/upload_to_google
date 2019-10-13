@@ -18,8 +18,10 @@ Which will have instruction to generate client_secerts.json.  When creating "**C
 ## COMMANDS
 
 At the command line issues these command to run the program:
+
 python tso.py ./files/hqdefault.jpg 1Z3dg1jkabN8QwzY0h0nXMIKzIrnuD9rX
 
 To run the test cases run this command:
+
 pytest -v cli.py
 
