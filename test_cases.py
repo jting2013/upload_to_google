@@ -1,7 +1,7 @@
 import pytest
 import hashlib
 import os
-from tso import upload
+from run_upload import upload
 from resource_file import *
 
 

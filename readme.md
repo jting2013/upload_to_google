@@ -11,18 +11,18 @@ Which will have instruction to generate client_secerts.json.  When creating "**C
 
 #### PRE-REQUISITES
 
-1. Install Python 3.6
-2. pip install pydrive
-3. pip install pytest
-4. pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+Install Python 3.6
+pip install pydrive
+pip install pytest
+ppip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
 ## COMMANDS
 
 At the command line issues these command to run the program:
 
-  > python tso.py ./files/hqdefault.jpg 1Z3dg1jkabN8QwzY0h0nXMIKzIrnuD9rX
+  > python run_upload.py ./files/hqdefault.jpg 1Z3dg1jkabN8QwzY0h0nXMIKzIrnuD9rX
 
 To run the test cases run this command:
 
-  > pytest -v cli.py
+  > pytest -v test_cases.py
 
