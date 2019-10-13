@@ -8,7 +8,11 @@ import sys
 import pprint
 
 
-def get_cli():
+def __get_cli():
+    """
+    Get the cli arguments
+    :return: object
+    """
     print('Count:', len(sys.argv))
     print('Type:', type(sys.argv))
 
@@ -22,8 +26,11 @@ def get_cli():
         return sys.argv
 
 
-def login_to_google():
-    # Login to Google Drive and create drive object
+def __login_to_google():
+    """
+    Login to Google Drive and create drive object
+    :return: object
+    """
     g_login = GoogleAuth()
 
     g_login.LoadCredentialsFile(MY_CARD)
@@ -50,14 +57,15 @@ def upload(test_file: str = None, test_url: str = None):
     :param test_url: location of the URL
     :return: object
     """
-    drive = login_to_google()
+    drive = __login_to_google()
     failed = {}
 
+    # Check to see if it has a value
     if test_url is None:
         test_url = FOLDER_ID
 
     if not test_file:
-        arg = get_cli()
+        arg = __get_cli()
         if arg:
             test_file = arg[1]
             test_url = arg[2]
@@ -66,6 +74,7 @@ def upload(test_file: str = None, test_url: str = None):
             return failed
 
     try:
+        # Open the file and gets the filename so it can be create for google.  Also define the folder ID to place it.
         with open(test_file, "r") as f:
             fn = os.path.basename(f.name)
             file_object = drive.CreateFile({'title': fn, "parents": [{"kind": "drive#fileLink", 'id': test_url}]})

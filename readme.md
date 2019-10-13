@@ -18,7 +18,10 @@ ppip install --upgrade google-api-python-client google-auth-httplib2 google-auth
 
 ## COMMANDS
 
-At the command line issues these command to run the program:
+At the command line issue this command to run the program see below.  After the filename you have to enter in filename 
+with a space then enter the folder patch.  Example of the ID folder path:
+
+  https://drive.google.com/drive/folders/**1Z3dg1jkabN8QwzY0h0nXMIKzIrnuD9rX**
 
   > python run_upload.py ./files/hqdefault.jpg 1Z3dg1jkabN8QwzY0h0nXMIKzIrnuD9rX
 
