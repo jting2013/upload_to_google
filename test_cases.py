@@ -1,8 +1,8 @@
 import pytest
 import hashlib
 import os
-from run_upload import upload
-from resource_file import *
+from lib.run_upload import upload
+from resource.resource_file import *
 
 
 def __upload(filename: str = None, url: str = None):
