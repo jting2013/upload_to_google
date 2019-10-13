@@ -12,8 +12,9 @@ Which will have instruction to generate client_secerts.json.  When creating "**C
 #### PRE-REQUISITES
 
 1. Install Python 3.6
-2. Pip install pydrive
-3. Pip install pytest
+2. pip install pydrive
+3. pip install pytest
+4. pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
 ## COMMANDS
 
